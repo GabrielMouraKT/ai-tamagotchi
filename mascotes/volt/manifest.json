@@ -1,0 +1,64 @@
+{
+  "id": "volt",
+  "name": "Volt",
+  "palette": "#71dcda",
+  "format": "png-sequence + transparent gif",
+  "animations": {
+    "idle": {
+      "frames": 8,
+      "fps": 6.7,
+      "loop": true,
+      "folder": "animacoes/idle/",
+      "gif": "animacoes/idle/idle.gif"
+    },
+    "feliz": {
+      "frames": 10,
+      "fps": 6.7,
+      "loop": true,
+      "folder": "animacoes/feliz/",
+      "gif": "animacoes/feliz/feliz.gif"
+    },
+    "piscar": {
+      "frames": 6,
+      "fps": 6.7,
+      "loop": true,
+      "folder": "animacoes/piscar/",
+      "gif": "animacoes/piscar/piscar.gif"
+    },
+    "triste": {
+      "frames": 8,
+      "fps": 6.7,
+      "loop": true,
+      "folder": "animacoes/triste/",
+      "gif": "animacoes/triste/triste.gif"
+    },
+    "preocupado": {
+      "frames": 8,
+      "fps": 6.7,
+      "loop": true,
+      "folder": "animacoes/preocupado/",
+      "gif": "animacoes/preocupado/preocupado.gif"
+    },
+    "comer_tokens": {
+      "frames": 10,
+      "fps": 6.7,
+      "loop": true,
+      "folder": "animacoes/comer_tokens/",
+      "gif": "animacoes/comer_tokens/comer_tokens.gif"
+    },
+    "dormir": {
+      "frames": 8,
+      "fps": 3.8,
+      "loop": true,
+      "folder": "animacoes/dormir/",
+      "gif": "animacoes/dormir/dormir.gif"
+    },
+    "despertar": {
+      "frames": 10,
+      "fps": 6.7,
+      "loop": true,
+      "folder": "animacoes/despertar/",
+      "gif": "animacoes/despertar/despertar.gif"
+    }
+  }
+}

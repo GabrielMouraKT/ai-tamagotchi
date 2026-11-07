@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Tamagotchi Desktop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <div class="titlebar">
+    <div class="logo"><span aria-hidden="true">🔥</span> <strong>AI Tamagotchi</strong></div>
+    <div class="windowtools">
+      <button id="dock" type="button" title="Grudar ao terminal" aria-label="Grudar ou desgrudar do terminal" aria-pressed="false">⧉</button>
+      <button id="termMenuBtn" type="button" title="Escolher terminal de destino" aria-label="Escolher terminal de destino" aria-haspopup="menu" aria-expanded="false">▾</button>
+      <button id="pin" type="button" title="Sempre à frente" aria-label="Sempre à frente" aria-pressed="false">♢</button>
+      <button id="gear" type="button" data-sheet="menu" title="Menu e preferências" aria-label="Menu e preferências">⚙</button>
+      <button id="minimize" type="button" title="Minimizar" aria-label="Minimizar">—</button>
+      <button id="close" type="button" title="Fechar" aria-label="Fechar">×</button>
+    </div>
+    <div id="termMenu" class="termmenu" role="menu" aria-label="Terminal de destino" hidden></div>
+  </div>
+
+  <main class="panel">
+    <div class="toprow">
+      <button id="openGallery" class="select-mascot" type="button" aria-haspopup="dialog" title="Escolher mascote">
+        <small>Mascote</small><span class="sel-line"><span aria-hidden="true">🔥</span><b id="selectedMascot">—</b><i aria-hidden="true">⌄</i></span>
+      </button>
+      <div class="mood-pill" id="moodPill" data-mood="unknown" role="status">◌ Aguardando</div>
+    </div>
+
+    <section class="hero" aria-label="Mascote">
+      <div class="hero-body">
+        <span class="spark spark1" aria-hidden="true">✦</span><span class="spark spark2" aria-hidden="true">✧</span><span class="spark spark3" aria-hidden="true">✦</span>
+        <div class="glow" aria-hidden="true"></div>
+        <div id="pet" class="pet unknown">
+          <div class="fig">
+            <img id="petImage" alt="Mascote">
+            <span class="fx fx-hearts" aria-hidden="true"><i>♥</i><i>♥</i><i>♥</i></span>
+            <span class="fx fx-cloud" aria-hidden="true">☁<i>💧</i><i>💧</i><i>💧</i></span>
+            <span class="fx fx-sweat" aria-hidden="true"><i>💦</i><i>💧</i></span>
+            <span class="fx fx-alert" aria-hidden="true">!</span>
+            <span class="fx fx-zz" aria-hidden="true"><i>Z</i><i>z</i><i>z</i></span>
+          </div>
+        </div>
+        <div class="bubble" id="bubble">Aguardando Claude Code</div>
+        <div class="emote" id="emote" aria-hidden="true">♥</div>
+        <button type="button" id="feedPet" class="feed" title="Animação de comer tokens (somente visual, não consome tokens da conta)">✦ Dar token</button>
+        <span id="anchorHint" class="anchor">Arraste pelo topo para mover</span>
+      </div>
+      <span id="petName" hidden>—</span>
+      <span class="sr" id="mood" role="status" aria-live="polite">Aguardando informações do Claude</span>
+    </section>
+
+    <div class="moodtabs" role="group" aria-label="Humor do mascote (clique para ver uma prévia)">
+      <button type="button" data-mood="happy" aria-pressed="false"><span aria-hidden="true">😊</span>Feliz</button>
+      <button type="button" data-mood="sad" aria-pressed="false"><span aria-hidden="true">😢</span>Triste</button>
+      <button type="button" data-mood="worried" aria-pressed="false"><span aria-hidden="true">😟</span>Preocupado</button>
+      <button type="button" data-mood="sleeping" aria-pressed="false"><span aria-hidden="true">😴</span>Dormindo</button>
+    </div>
+
+    <section class="meters" aria-label="Medidores (clique para detalhes)">
+      <button type="button" class="mrow" id="cardCtx" data-sheet="ctx" data-level="none">
+        <span class="mi" aria-hidden="true">💬</span>
+        <span class="mm"><span class="mt">Contexto da conversa</span><span class="track" role="meter" aria-valuemin="0" aria-valuemax="100" aria-label="Contexto livre"><i id="ctxBar"></i></span><small class="c-sub" id="ctxSub">—</small></span>
+        <b class="mv" id="ctxText">—</b>
+      </button>
+      <button type="button" class="mrow" id="cardFive" data-sheet="five" data-level="none">
+        <span class="mi" aria-hidden="true">🕐</span>
+        <span class="mm"><span class="mt">Limite 5h</span><span class="track" role="meter" aria-valuemin="0" aria-valuemax="100" aria-label="Janela de 5 horas livre"><i id="fiveBar"></i></span><small class="c-sub" id="fiveSub">—</small></span>
+        <b class="mv" id="fiveText">—</b>
+      </button>
+      <button type="button" class="mrow" id="cardWeek" data-sheet="week" data-level="none">
+        <span class="mi" aria-hidden="true">📅</span>
+        <span class="mm"><span class="mt">Limite semanal</span><span class="track" role="meter" aria-valuemin="0" aria-valuemax="100" aria-label="Limite de 7 dias livre"><i id="weekBar"></i></span><small class="c-sub" id="weekSub">—</small></span>
+        <b class="mv" id="weekText">—</b>
+      </button>
+    </section>
+
+    <section class="infocard" aria-label="Sessão (clique para detalhes)">
+      <button type="button" data-sheet="model"><span class="ii" aria-hidden="true">◎</span><span class="il">Modelo:</span><b id="model">—</b></button>
+      <button type="button" data-sheet="cost"><span class="ii" aria-hidden="true">≋</span><span class="il">Custo estimado:</span><b id="cost">—</b></button>
+      <button type="button" data-sheet="reset"><span class="ii" aria-hidden="true">↻</span><span class="il">Próximo reset:</span><b id="nextReset">—</b></button>
+    </section>
+
+    <section class="duo" aria-label="Contagem e uso (clique para detalhes)">
+      <button type="button" class="dcard" data-sheet="five"><span class="dt"><i aria-hidden="true">◷</i>Contagem regressiva</span><b class="dv" id="countdown">—</b><small id="countdownSub">—</small></button>
+      <button type="button" class="dcard" data-sheet="week"><span class="dt"><i aria-hidden="true">▦</i>Uso semanal</span><b class="dv sm" id="weekUsed">—</b><small id="weekUsedSub">—</small></button>
+    </section>
+
+    <button id="openGalleryBottom" class="gallery-cta" type="button" aria-haspopup="dialog"><span aria-hidden="true">🐾</span> Escolher mascote <i aria-hidden="true">›</i></button>
+    <footer><span id="connection" class="signal" role="status">CARREGANDO</span><span id="updated">Sem dados ainda</span></footer>
+  </main>
+</div>
+
+<dialog id="sheet" aria-labelledby="sheetTitle">
+  <div class="sheet-head"><h2 id="sheetTitle">—</h2><button id="sheetClose" class="close-btn" type="button" aria-label="Fechar">×</button></div>
+  <div id="sheetBody"></div>
+</dialog>
+
+<dialog id="galleryDialog" aria-labelledby="galleryTitle">
+  <div class="gallery-header"><div><h2 id="galleryTitle">Escolha seu companheiro</h2><p id="gallerySub">18 mascotes · paleta própria · não altera a telemetria</p></div><button id="closeGallery" class="close-btn" type="button" aria-label="Fechar galeria">×</button></div>
+  <input id="mascotSearch" type="search" placeholder="Buscar mascote..." aria-label="Buscar mascote">
+  <div id="mascotGrid" class="mascot-grid"></div>
+  <p id="galleryEmpty" class="empty" hidden>Nenhum mascote encontrado.</p>
+  <div class="gallery-pager"><button id="pagePrev" type="button" aria-label="Página anterior">‹</button><span id="galleryCount">—</span><button id="pageNext" type="button" aria-label="Próxima página">›</button></div>
+  <div class="gallery-footer"><span id="previewName">—</span><button id="applyMascot" type="button">Usar este mascote</button></div>
+</dialog>
+
+<script src="lib/core.js"></script>
+<script src="lib/anim.js"></script>
+<script src="app.js"></script>
+<script src="desktop-ui.js"></script>
+</body>
+</html>

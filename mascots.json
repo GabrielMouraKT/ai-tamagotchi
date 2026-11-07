@@ -1,0 +1,164 @@
+[
+  {
+    "id": "fox",
+    "name": "Foguinho",
+    "description": "Raposa flamejante",
+    "emoji": "🦊",
+    "src": "assets/fox.png",
+    "color": "#ff922d",
+    "background": "#48200f"
+  },
+  {
+    "id": "ghost",
+    "name": "Pixel",
+    "description": "Fantasma digital",
+    "emoji": "👻",
+    "src": "assets/ghost.png",
+    "color": "#b68cff",
+    "background": "#281b46"
+  },
+  {
+    "id": "robot",
+    "name": "Bip",
+    "description": "Robô companheiro",
+    "emoji": "🤖",
+    "src": "assets/robot.png",
+    "color": "#67e6e4",
+    "background": "#102d36"
+  },
+  {
+    "id": "draco",
+    "name": "Draco",
+    "description": "Dragão esmeralda",
+    "emoji": "🐉",
+    "src": "assets/draco.png",
+    "color": "#5ee0a0",
+    "background": "#102b27"
+  },
+  {
+    "id": "axol",
+    "name": "Axol",
+    "description": "Axolote rosa",
+    "emoji": "🫧",
+    "src": "assets/axol.png",
+    "color": "#ff9dc2",
+    "background": "#3c1b32"
+  },
+  {
+    "id": "luna",
+    "name": "Luna",
+    "description": "Coruja lunar",
+    "emoji": "🦉",
+    "src": "assets/luna.png",
+    "color": "#b29dff",
+    "background": "#22223c"
+  },
+  {
+    "id": "jelly",
+    "name": "Jelly",
+    "description": "Água-viva",
+    "emoji": "🪼",
+    "src": "assets/jelly.png",
+    "color": "#66edf7",
+    "background": "#153340"
+  },
+  {
+    "id": "nova",
+    "name": "Nova",
+    "description": "Estrela cósmica",
+    "emoji": "⭐",
+    "src": "assets/nova.png",
+    "color": "#e0a2ff",
+    "background": "#302045"
+  },
+  {
+    "id": "turt",
+    "name": "Turt",
+    "description": "Tartaruga tech",
+    "emoji": "🐢",
+    "src": "assets/turt.png",
+    "color": "#8ee7a1",
+    "background": "#17312a"
+  },
+  {
+    "id": "volt",
+    "name": "Volt",
+    "description": "Coelho elétrico",
+    "emoji": "⚡",
+    "src": "assets/volt.png",
+    "color": "#ffe066",
+    "background": "#352a16"
+  },
+  {
+    "id": "mimi",
+    "name": "Mimi",
+    "description": "Morcego lunar",
+    "emoji": "🦇",
+    "src": "assets/mimi.png",
+    "color": "#cb91f7",
+    "background": "#2d1d42"
+  },
+  {
+    "id": "pingo",
+    "name": "Pingo",
+    "description": "Pinguim explorador",
+    "emoji": "🐧",
+    "src": "assets/pingo.png",
+    "color": "#75c4ff",
+    "background": "#172a45"
+  },
+  {
+    "id": "capi",
+    "name": "Capi",
+    "description": "Capivara brotinho",
+    "emoji": "🌱",
+    "src": "assets/capi.png",
+    "color": "#d1a17b",
+    "background": "#33271c"
+  },
+  {
+    "id": "fenix",
+    "name": "Fênix",
+    "description": "Fênix filhote",
+    "emoji": "🔥",
+    "src": "assets/fenix.png",
+    "color": "#ff893c",
+    "background": "#3e1d13"
+  },
+  {
+    "id": "nuvem",
+    "name": "Nuvem",
+    "description": "Ovelha de nuvem",
+    "emoji": "☁️",
+    "src": "assets/nuvem.png",
+    "color": "#bfe8ff",
+    "background": "#263346"
+  },
+  {
+    "id": "astro",
+    "name": "Astro",
+    "description": "Gato estelar",
+    "emoji": "🐱",
+    "src": "assets/astro.png",
+    "color": "#7ddffe",
+    "background": "#193045"
+  },
+  {
+    "id": "soli",
+    "name": "Soli",
+    "description": "Solzinho",
+    "emoji": "☀️",
+    "src": "assets/soli.png",
+    "color": "#ffd16a",
+    "background": "#3b2b10"
+  },
+  {
+    "id": "octo",
+    "name": "Octo",
+    "description": "Polvo digital",
+    "emoji": "🐙",
+    "src": "assets/octo.png",
+    "color": "#c38aff",
+    "background": "#2e2044"
+  }
+]

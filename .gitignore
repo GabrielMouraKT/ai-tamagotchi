@@ -1,0 +1,14 @@
+# dependências e artefatos de build (o instalador .exe vai em "Releases", não no código)
+node_modules/
+dist/
+*.log
+
+# arquivos de trabalho / pessoais
+PROMPT_CLAUDE_CODE.md
+.env
+.env.*
+*.local
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

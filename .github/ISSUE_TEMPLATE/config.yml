@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Reportar uma vulnerabilidade (privado)
+    url: https://github.com/GabrielMouraKT/ai-tamagotchi/security/advisories/new
+    about: Falhas de segurança NÃO devem ser abertas como issue pública.
