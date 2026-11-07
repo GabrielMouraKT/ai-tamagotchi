@@ -98,4 +98,4 @@ Mais detalhes em [`docs/ARQUITETURA.md`](docs/ARQUITETURA.md).
 Contribuições são muito bem-vindas: correções, novos mascotes, traduções, testes, ideias. Leia o [**guia de contribuição**](CONTRIBUTING.md), abra uma [issue](https://github.com/GabrielMouraKT/ai-tamagotchi/issues/new/choose) ou envie um pull request. Este projeto segue um [código de conduta](CODE_OF_CONDUCT.md).
 
 ## Licença
-[MIT](LICENSE). O código **e a arte dos mascotes** (gerada por IA) podem ser usados, modificados e redistribuídos por qualquer pessoa, inclusive comercialmente.
+[MIT](LICENSE). O código **e a arte dos mascotes** (gerada por IA) podem ser usados, modificados e redistribuídos por qualquer pessoa, inclusive comercialmente. Veja também o [NOTICE](NOTICE.md).

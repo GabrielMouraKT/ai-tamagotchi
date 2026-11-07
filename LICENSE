@@ -19,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----------------------------------------------------------------------------
-Arte / Art assets
-
-The mascot artwork (everything under `mascotes/`, `assets/` and `build/`) was
-generated with AI tools and is released under the same MIT terms as the code,
-so anyone may use, modify and redistribute it, including commercially.
-
-Observação (PT-BR): a arte dos mascotes (pastas `mascotes/`, `assets/` e
-`build/`) foi gerada por IA e é liberada sob os mesmos termos MIT do código:
-qualquer pessoa pode usar, modificar e redistribuir, inclusive comercialmente.
