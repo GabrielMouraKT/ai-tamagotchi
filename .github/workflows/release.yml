@@ -1,0 +1,33 @@
+name: Release (instalador .exe)
+
+# Manual: Actions > Release > Run workflow, informando a tag de uma Release já criada (ex.: v0.4.0).
+# Gera o instalador e anexa à Release.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag da Release que receberá o instalador (ex.: v0.4.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run dist
+      - name: Anexar instalador à Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release upload "${{ inputs.tag }}" dist/*.exe --clobber

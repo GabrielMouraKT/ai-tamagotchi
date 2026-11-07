@@ -2,6 +2,7 @@
 
 **Um mascote animado para o seu desktop que reage ao uso do Claude Code.** Ele fica numa janela pequena (ou grudado ao lado do terminal) e mostra, com carinha e animação, quanto você ainda tem de contexto, de janela de 5 horas e de limite semanal. É gratuito, de código aberto e **não depende de navegador**.
 
+[![CI](https://github.com/GabrielMouraKT/ai-tamagotchi/actions/workflows/ci.yml/badge.svg)](https://github.com/GabrielMouraKT/ai-tamagotchi/actions/workflows/ci.yml)
 [![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-green.svg)](LICENSE)
 ![Plataforma: Windows](https://img.shields.io/badge/plataforma-Windows%2010%2F11-blue)
 

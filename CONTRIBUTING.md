@@ -23,7 +23,7 @@ Dica: para testar sem mexer nos seus dados reais, rode com uma pasta de dados de
 ## Fluxo de contribuição
 1. Faça um **fork** e crie um branch: `git checkout -b minha-melhoria`.
 2. Faça mudanças **pequenas e focadas**, com testes quando mudar comportamento.
-3. Rode `npm test` (precisa passar).
+3. Rode `npm test`. O CI roda os mesmos testes no Windows.
 4. Abra o **pull request** explicando o que mudou e por quê (o modelo ajuda). Se mudou a interface, anexe uma captura **sem dados pessoais**.
 
 ## Regras do projeto (importantes)
@@ -52,7 +52,7 @@ Cada mascote fica em `mascotes/<id>/` e é registrado em `mascots.json`.
 `npm test` (= `node --test "test/*.test.js"`). Cobrem: leitura/normalização da telemetria, humor, sessões e custos, servidor local, instalador, acoplamento e posicionamento, pacote `.exe` e privacidade.
 
 ## Gerar o instalador
-`npm run dist` cria `dist/AI-Tamagotchi-Setup-<versão>.exe` (NSIS, por usuário). Para publicar: crie uma *Release* no GitHub e anexe o `.exe`.
+`npm run dist` cria `dist/AI-Tamagotchi-Setup-<versão>.exe` (NSIS, por usuário). Para publicar: crie uma *Release* no GitHub e anexe o `.exe` (ou use o workflow manual **Release** em *Actions*).
 
 ## Código de conduta
 Ao participar, você concorda com o [Código de Conduta](CODE_OF_CONDUCT.md).
